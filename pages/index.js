@@ -30,7 +30,7 @@ export default function Home() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch("http://localhost:8000/call", {
+    await fetch(`${process.env.NEXT_PUBLIC_APP_URL}call`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
